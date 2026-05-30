@@ -1,3 +1,8 @@
+// ===== SET USER INITIAL =====
+const userName = localStorage.getItem('user_name');
+if (userName) {
+  document.getElementById('profileIcon').textContent = userName.charAt(0).toUpperCase();
+}
 
 // ===== FILTER FUNCTION =====
 function filterCards() {

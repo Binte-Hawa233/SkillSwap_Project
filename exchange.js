@@ -1,3 +1,8 @@
+// ===== SET USER INITIAL =====
+const userName = localStorage.getItem('user_name');
+if (userName) {
+  document.getElementById('profileIcon').textContent = userName.charAt(0).toUpperCase();
+}
 // ===== SIDEBAR =====
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const sidebar = document.getElementById('sidebar');

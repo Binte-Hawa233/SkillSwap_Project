@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
+  // ===== SET USER INITIAL =====
+const userName = localStorage.getItem('user_name');
+if (userName) {
+  document.getElementById('profileIcon').textContent = userName.charAt(0).toUpperCase();
+}
     const menuBtn = document.querySelector(".menu-btn");
     const sidebar = document.querySelector(".sidebar");
 
