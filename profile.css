@@ -567,8 +567,33 @@ textarea::placeholder {
 .notif-wrapper { position: relative; }
 
 #notifDropdown {
-    right: 5px;
-    top: 30px;
+    position: absolute;
+  top: 35px;
+  right: 0;
+  background: #161b27;
+  border-radius: 12px;
+  padding: 10px;
+  display: none;
+  min-width: 220px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.08);
+  z-index: 2000;
+}
+
+#notifDropdown.show {
+  display: block;
+}
+
+#notifDropdown div {
+  padding: 10px 14px;
+  color: #e0e6f0;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#notifDropdown div:hover {
+  background: #222a35;
 }
 
 #viewAllBtn {
