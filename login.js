@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!terms) { document.getElementById("termsError").innerText = "You must accept terms"; isValid = false; }
 
     if (isValid) {
-      fetch('api/register.php', {
+      fetch('/api/register.php', {
         method : 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body   : new URLSearchParams({ name, email, password })
