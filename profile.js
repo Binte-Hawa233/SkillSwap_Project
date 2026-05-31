@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  // ===== SET PROFILE NAME AND EMAIL =====
+const userName  = localStorage.getItem('user_name');
+const userEmail = localStorage.getItem('user_email');
+
+if (userName) {
+  document.getElementById('profileName').textContent  = userName;
+  document.getElementById('profileIcon').textContent  = userName.charAt(0).toUpperCase();
+}
+
+if (userEmail) {
+  document.getElementById('profileEmail').textContent = userEmail;
+}
   // ===== SET USER INITIAL =====
 const userName = localStorage.getItem('user_name');
 if (userName) {
