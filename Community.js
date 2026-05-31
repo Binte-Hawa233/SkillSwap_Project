@@ -9,7 +9,7 @@ if (userName) {
 
   // ===== LOAD POSTS FROM DATABASE =====
   function loadPosts() {
-    fetch('api/get_posts.php')
+    fetch('/api/get_posts.php')
     .then(res => res.json())
     .then(posts => {
       const postsList = document.querySelector('.posts-list');
@@ -65,7 +65,7 @@ if (userName) {
     document.querySelectorAll('.action-btn[data-type="like"]').forEach(btn => {
       btn.addEventListener('click', () => {
         const post_id = btn.getAttribute('data-post-id');
-        fetch('api/like_post.php', {
+        fetch('/api/like_post.php', {
           method : 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body   : new URLSearchParams({ post_id })
@@ -166,7 +166,7 @@ if (userName) {
     const activeTag = document.querySelector('.composer .tag.active');
     const topic = activeTag ? activeTag.textContent.trim() : 'General';
 
-    fetch('api/create_post.php', {
+    fetch('/api/create_post.php', {
       method : 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body   : new URLSearchParams({ content, topic })
