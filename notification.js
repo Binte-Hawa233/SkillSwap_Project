@@ -50,11 +50,9 @@ if (userName) {
   const viewAllBtn = document.getElementById("viewAllBtn");
 
   if (notifIcon && notifDropdown) {
-    notifIcon.addEventListener("click", (e) => {
-    e.stopPropagation();
+   notifIcon.addEventListener("click", () => {
     notifDropdown.classList.toggle("show");
-    dropdown.classList.remove("show");
-  });
+});
     if (viewAllBtn) {
       viewAllBtn.addEventListener("click", () => {
         window.location.href = "notification.html";
