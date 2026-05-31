@@ -1,5 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ===== PROFILE DROPDOWN =====
+const profileIcon = document.getElementById('profileIcon');
+const dropdown    = document.getElementById('dropdownMenu');
+
+if (profileIcon && dropdown) {
+  profileIcon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('show');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!profileIcon.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.remove('show');
+    }
+  });
+
+  document.getElementById('profileBtn').onclick = () => {
+    window.location.href = 'profile.html';
+  };
+
+  document.getElementById('signOutBtn').onclick = () => {
+    localStorage.clear();
+    window.location.href = 'index.html';
+  };
+}
+
   // ===== SET USER INITIAL =====
   const userName = localStorage.getItem('user_name');
   if (userName) {
