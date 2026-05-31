@@ -567,7 +567,8 @@ textarea::placeholder {
 .notif-wrapper { position: relative; }
 
 #notifDropdown {
-    position: absolute;
+  display:none;
+  position: absolute;
   top: 35px;
   right: 0;
   background: #161b27;
