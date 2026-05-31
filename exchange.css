@@ -946,6 +946,40 @@ a { -webkit-tap-highlight-color: transparent; }
   .cards, .cards-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+.profile-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #161b27;
+  border-radius: 12px;
+  padding: 10px;
+  display: none;
+  min-width: 200px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.08);
+  z-index: 2000;
+}
+
+.dropdown.show { display: block; }
+
+.dropdown div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #e0e6f0;
+  cursor: pointer;
+}
+
+.dropdown div:hover { background: #222a35; }
+
 @media (max-width: 768px) {
   .navbar { padding: 0 15px; }
   .main { padding: 15px; gap: 20px; }
