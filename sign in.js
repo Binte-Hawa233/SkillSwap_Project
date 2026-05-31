@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
     else if (password.length < 8) { document.getElementById("passwordError").innerText = "Minimum 8 characters required"; valid = false; }
 
     if (valid) {
-      fetch('api/login.php', {
-        method : 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body   : new URLSearchParams({ email, password })
-      })
+      fetch('/api/login.php', {
+          method : 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body   : new URLSearchParams({ email, password })
+        })
       .then(res => res.json())
       .then(data => {
         if (data.status === 'success') {
