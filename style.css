@@ -6,7 +6,7 @@
 body{
     margin: 0;
     font-family: 'poppins',sans-serif;
-    background-color: red;
+    background: rgb(43, 43, 43);
     color: white;
     overflow-x: hidden;
     width: 100%;
